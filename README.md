@@ -1,16 +1,47 @@
-# VueDraggable&Quasar
+# Quasar App (vue-draggable-with-quasar)
 
-## Setup
+A Quasar Framework with VueDraggable (created with quasar-cli)
 
-``` bash
-# install dependencies
-npm install
+## Add VueDraggable
 
-# serve with hot reload at localhost:8080
-npm run serve
-
-# build for production with minification
-npm run build
+#### Install dependency
+```
+npm i vue-draggable
+```
+#### Create Quasar Boot
+```bash
+quasar new boot vue-draggable
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+```js
+import VueDraggable from 'vue-draggable'
+
+export default async ({ Vue }) => {
+  Vue.use(VueDraggable)
+}
+```
+#### Modify `quasar.conf.js` boot section
+```js
+    boot: [
+      'vue-draggable'
+    ],
+    ...
+```
+
+### Start the app in development mode (hot-code reloading, error reporting, etc.)
+```bash
+quasar dev
+```
+
+### Lint the files
+```bash
+npm run lint
+```
+
+### Build the app for production
+```bash
+quasar build
+```
+
+### Customize the configuration
+See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
